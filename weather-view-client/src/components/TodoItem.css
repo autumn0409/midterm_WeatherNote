@@ -1,0 +1,59 @@
+.todo-item {
+    width: 100%;
+}
+
+.todo-item .todo {
+    width: 100%;
+}
+
+.todo-item .remove {
+    align-self: center;
+    font-size: 1.5rem;
+    opacity: 0;
+    width: 2rem;
+}
+
+.todo-item:hover .remove {
+    opacity: 100;
+    color: #bcbcbc;
+}
+
+.todo-item:hover .remove:hover{
+    cursor: pointer;
+    color: rgb(77, 77, 77);
+}
+
+.todo-item .wrap {
+    width: 100%;
+    padding-left: 0.75rem;
+    overflow: hidden;
+}
+
+.todo-item .ts {
+    color: #bcbcbc;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.todo-item .text {
+    white-space: pre-wrap;
+}
+
+.todo-item .done-ts {
+    color: #bcbcbc;
+    font-size: 0.875rem;
+}
+
+.todo-item .check .checkbox {
+    font-size: 1.25rem;
+    color: #80caf0;
+    padding-left: 0.5rem;
+}
+
+.todo-item .check .checkbox:hover {
+    cursor: pointer;
+}
+
+.todo-item.done .text {
+    text-decoration: line-through;
+}

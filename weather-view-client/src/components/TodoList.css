@@ -1,0 +1,11 @@
+
+.todo-list .empty {
+    border-color: rgba(255, 255, 255, 0);
+    background-color: transparent;
+    margin-top: 1rem;
+}
+
+.todo-list .empty-text {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
