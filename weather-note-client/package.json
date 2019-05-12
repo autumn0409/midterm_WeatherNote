@@ -1,5 +1,5 @@
 {
-  "name": "weather-view",
+  "name": "weather-note-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

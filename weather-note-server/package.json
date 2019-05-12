@@ -1,7 +1,6 @@
 {
-  "name": "weather-view-server",
+  "name": "weather-note-server",
   "version": "1.0.0",
-  "description": "weather view server",
   "main": "src/server.js",
   "scripts": {
     "start": "nodemon src/server.js",
