@@ -1,0 +1,32 @@
+
+.project-item .project-name {
+    padding: 0.5rem 1rem;
+}
+
+.project-item .project-name:hover {
+    cursor: pointer;
+}
+
+.project-item .project-name i {
+    font-size: 60%;
+    margin-right: 1rem;
+}
+
+.project-item:hover {
+    background-color: aliceblue;
+}
+
+.project-item .remove {
+    opacity: 0;
+    padding-right: 1rem;
+}
+
+.project-item:hover .remove {
+    opacity: 100;
+    color: #bcbcbc;
+}
+
+.project-item:hover .remove:hover {
+    cursor: pointer;
+    color: rgb(77, 77, 77);
+}

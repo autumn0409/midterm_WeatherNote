@@ -2,12 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const todoRouter = require('./routers/todos.js');
+const projectRouter = require('./routers/projects.js');
 const errorHandler = require('./middleware/error-handler.js');
 
 const app = express();
 
 app.use(express.static('build'));
 app.use('/api/todos', todoRouter);
+app.use('/api/projects', projectRouter);
 app.get('/*', (req, res) => res.redirect('/'));
 app.use(errorHandler);
 
@@ -18,7 +20,7 @@ app.listen(port, () => {
 
 
 // Connect to mongo
-mongoose.connect('mongodb+srv://Adam:FeUkt8AxcsMRZVsE@cluster0-hkucr.mongodb.net/weather-view?retryWrites=true', {
+mongoose.connect('mongodb+srv://Adam:FeUkt8AxcsMRZVsE@cluster0-hkucr.mongodb.net/weather-note?retryWrites=true', {
     useNewUrlParser: true
 })
 db = mongoose.connection;

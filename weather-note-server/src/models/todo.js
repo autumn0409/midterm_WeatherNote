@@ -1,13 +1,20 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-// Creating a schema, sort of like working with an ORM
 const TodoSchema = new Schema({
     id: {
         type: String,
         required: true,
     },
     text: {
+        type: String,
+        required: true,
+    },
+    date: {
+        type: Date,
+        required: true,
+    },
+    project: {
         type: String,
         required: true,
     },

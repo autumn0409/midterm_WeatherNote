@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Button, ButtonGroup } from 'reactstrap';
 
+import ProjectSelecter from '../components/ProjectSelecter';
 import TodoForm from '../components/TodoForm';
 import TodoList from '../components/TodoList';
 
@@ -32,8 +33,8 @@ class Todos extends React.Component {
 
         return (
             <div className='todos d-flex flex-column'>
-                <div className='label d-flex justify-content-between align-items-end'>
-                    <h4><i className='fa fa-tags' aria-hidden="true"></i>&nbsp;&nbsp;TODOS</h4>
+                <div className='d-flex justify-content-between'>
+                    <ProjectSelecter />
                     <ButtonGroup size='sm'>
                         <Button outline={filterMode === 'all' ? false : true} color='light' onClick={this.toggleAll}>All</Button>
                         <Button outline={filterMode === 'active' ? false : true} color='light' onClick={this.toggleActive}>Active</Button>
@@ -64,4 +65,5 @@ class Todos extends React.Component {
 
 export default connect(state => ({
     ...state.todo,
+    filterMode: state.filterMode,
 }))(Todos);

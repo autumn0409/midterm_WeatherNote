@@ -6,21 +6,13 @@
     width: 100%;
 }
 
-.todo-item .remove {
+.todo-item .date {
     align-self: center;
-    font-size: 1.5rem;
-    opacity: 0;
-    width: 2rem;
-}
-
-.todo-item:hover .remove {
-    opacity: 100;
-    color: #bcbcbc;
-}
-
-.todo-item:hover .remove:hover{
-    cursor: pointer;
-    color: rgb(77, 77, 77);
+    width: 4rem;
+    text-align: center;
+    font-size: 0.85rem;
+    margin-right: 0.3rem;
+    color: #747474;
 }
 
 .todo-item .wrap {
@@ -37,6 +29,21 @@
 
 .todo-item .text {
     white-space: pre-wrap;
+}
+
+.todo-item .remove i {
+    opacity: 0;
+    font-size: 1.1rem;
+}
+
+.todo-item:hover .remove i{
+    opacity: 1;
+    color: #868686;
+}
+
+.todo-item:hover .remove i:hover {
+    color: #414141;
+    cursor: pointer;
 }
 
 .todo-item .done-ts {

@@ -2,15 +2,17 @@ import axios from 'axios';
 
 const todoBaseUrl = 'http://localhost:3000/api/todos';
 
-export const listTodos = (filterMode = 'all') => {
-    let url = `${todoBaseUrl}?mode=`;
+export const listTodos = (filterMode = 'all', project) => {
+    let url = `${todoBaseUrl}?`;
 
     if (filterMode === 'active')
-        url += 'active';
+        url += 'mode=active';
     else if (filterMode === 'completed')
-        url += 'completed';
+        url += 'mode=completed';
     else
-        url += 'all';
+        url += 'mode=all';
+
+    url += `&project=${project}`
 
     console.log(`Making GET request to: ${url}`);
 
@@ -23,12 +25,12 @@ export const listTodos = (filterMode = 'all') => {
 }
 
 
-export const createTodo = (text) => {
+export const createTodo = (text, date, project) => {
     let url = todoBaseUrl;
 
     console.log(`Making POST request to: ${url}`);
 
-    return axios.post(url, { text }).then((res) => {
+    return axios.post(url, { text, date, project }).then((res) => {
         if (res.status !== 200)
             throw new Error(`Unexpected response code: ${res.status}`);
 

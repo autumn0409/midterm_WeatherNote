@@ -1,0 +1,29 @@
+.dropdown-menu {
+    width: 15rem;
+}
+
+.last-item .new-project {
+    padding: 0.5rem 1rem;
+}
+
+.last-item .new-project i {
+    font-size: 75%;
+    margin-right: 1rem;
+}
+
+.last-item .remove {
+    opacity: 0;
+}
+
+.last-item:hover {
+    cursor: pointer;
+    color: rgb(56, 131, 197);
+}
+
+.add-project .form-control.no-border {
+    border-radius: 0;
+}
+
+.add-project .form-control.no-border:focus {
+    box-shadow: none;
+}
