@@ -1,5 +1,5 @@
 {
-  "name": "weather-note-client",
+  "name": "weathernote-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
