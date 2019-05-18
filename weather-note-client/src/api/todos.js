@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const todoBaseUrl = 'http://localhost:3000/api/todos';
+const todoBaseUrl = 'http://weathernote-env.yf2p9krem3.us-east-1.elasticbeanstalk.com/';
 
 export const listTodos = (filterMode = 'all', project) => {
     let url = `${todoBaseUrl}?`;
