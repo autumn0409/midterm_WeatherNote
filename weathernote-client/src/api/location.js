@@ -5,8 +5,11 @@ const key = 'AIzaSyDrQpacyuBhAAB5TFobrhKWyk7rugcEOfw';
 const geoCodingBaseUrl = `https://maps.googleapis.com/maps/api/geocode/json?key=${key}`;
 let geoCodingSource = axios.CancelToken.source();
 
+const geoLocationBaseUrl = `https://www.googleapis.com/geolocation/v1/geolocate?key=${key}`;
+let geoLocationSource = axios.CancelToken.source();
+
 export const locationToAddress = (pos) => {
-    let url = `${geoCodingBaseUrl}&latlng=${pos.lat},${pos.lon}&result_type=administrative_area_level_3`;
+    let url = `${geoCodingBaseUrl}&latlng=${pos.lat},${pos.lon}&result_type=administrative_area_level_1`;
 
     console.log(`Making request to ${url}`);
 
@@ -54,15 +57,17 @@ export const searchAddress = (inputAddress) => {
 
 export const getCurrentLocation = (getState) => {
 
-    return new Promise((resolve, reject) => {
-        navigator.geolocation.getCurrentPosition((position) => {
-            const currentLocation = {
-                lat: position.coords.latitude,
-                lon: position.coords.longitude
-            };
-            resolve(currentLocation);
-        }, () => {
-            resolve(getState().location);
-        });
+    let url = geoLocationBaseUrl;
+
+    console.log(`Making Post request to ${url}`);
+
+    return axios.post(url, { cancelToken: geoLocationSource.token }).then(function (res) {
+        return {
+            lat: res.data.location.lat,
+            lon: res.data.location.lng
+        };
+    }).catch(function (err) {
+        console.log(err);
+        return getState().location;
     });
 }
