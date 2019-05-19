@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const projectBaseUrl = 'http://weathernote-server-dev.us-west-2.elasticbeanstalk.com';
+const projectBaseUrl = 'http://weathernote-server-dev.us-west-2.elasticbeanstalk.com/api/projects';
 
 export const listProjects = () => {
     let url = `${projectBaseUrl}`;
