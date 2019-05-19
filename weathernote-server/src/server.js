@@ -7,7 +7,11 @@ const errorHandler = require('./middleware/error-handler.js');
 
 const app = express();
 
-app.use(express.static('public'));
+app.use(express.static('public', {
+    setHeaders: (res, path, stat) => {
+        res.set('Cache-Control', 'public, s-maxage=86400');
+    }
+}));
 app.use('/api/todos', todoRouter);
 app.use('/api/projects', projectRouter);
 app.get('/*', (req, res) => res.redirect('/'));
