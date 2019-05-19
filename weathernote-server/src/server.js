@@ -7,6 +7,12 @@ const errorHandler = require('./middleware/error-handler.js');
 
 const app = express();
 
+// Develop mongodb URL
+// const DB_URL = <MLAB_MONGODB_URL>
+
+// Staging mongodb URL
+const DB_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_CLUSTER_NAME}-hkucr.mongodb.net/${process.env.DB_DATABASE_NAME}?retryWrites=true`;
+
 app.use(express.static('public', {
     setHeaders: (res, path, stat) => {
         res.set('Cache-Control', 'public, s-maxage=86400');
@@ -24,7 +30,7 @@ app.listen(port, () => {
 
 
 // Connect to mongo
-mongoose.connect('mongodb+srv://Adam:FeUkt8AxcsMRZVsE@cluster0-hkucr.mongodb.net/weather-note?retryWrites=true', {
+mongoose.connect(DB_URL, {
     useNewUrlParser: true
 })
 db = mongoose.connection;
