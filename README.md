@@ -1,6 +1,6 @@
 # WeatherNote
 
-A web app that combines weather forecast and to-do list.
+A web app that combines the features of the weather forecast and to-do list.
 
 ## Features
 
@@ -92,23 +92,23 @@ Now, you can open your browser and type the url `localhost:3000` to use this app
 
 * Remove all features about post and mood.
 
-* Remove the feature of searching specific text of todos.
+* Remove the feature of searching the specific text of todos.
 
 * Modify openweathermap's api to get the weather information by geographic coordinate rather than city name.
 
 * Modify todo list's client-side api code by using RESTful api to communicate with backend rather than using localStorage.
 
-* Finish todo list's server-side code, and use mongodb as database rather than postgreSQL.
+* Finish todo list's server-side code, and use mongodb as a database rather than postgreSQL.
 
 * Finish online deployment.
 
 ### Additional Features
 
-* Add [Google Geolocation API](https://developers.google.com/maps/documentation/geolocation/intro) to get current location of the user when user opens the app for the first time.
+* Add [Google Geolocation API](https://developers.google.com/maps/documentation/geolocation/intro) to get current location of the user when the user opens the app for the first time.
 
-* Add [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/start) to provide geocoding and reverse geocoding of addresses, so that users can search weather by any place name rather than just city name.
+* Add [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/start) to provide geocoding and reverse geocoding of addresses, so that users can search for the weather by any place name rather than just city name.
 
-* Add the filter(all, active, completed) of todo list.
+* Add the filter(all, active, completed) of the todo list.
 
 * Add the feature of unaccomplishing a single todo item.
 
@@ -132,4 +132,4 @@ Now, you can open your browser and type the url `localhost:3000` to use this app
 
 這次的期中project其實是根據清大資工web programming的作業來做修改及新增的([課程網頁連結](https://nthu-datalab.github.io/webapp/index.html))，主要是想藉著這次的機會跟完所有的課程及實做來幫助自己更加熟悉web app development。
 
-藉由這份project，我除了對整個react, redux, RESTful api, backend server, DB等一連串的串接更加熟悉了之外，在trace這份code的過程中也學到了許多coding convention及開發web應用的技巧，最後，也學到了一些docker的應用以及deploy到網路上的操作。也希望能在期末project中藉由這次所學，開發出一個更完整的應用。
+藉由這份project，我除了對整個react, redux, RESTful api, backend server, DB等一連串的串接更加熟悉了之外，在trace這份code的過程中也學到了許多coding convention及開發web應用的技巧，最後，也學到了一些docker的應用以及deploy到網路上的操作。希望能在期末project中藉由這次所學，開發出一個更完整的應用。
