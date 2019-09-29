@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const key = '36978c6550efee0e27e50850cc57adda';
+const key = "<openweathermap's api key>";
 
 export const getWeatherGroup = (code) => {
     let group = 'na';

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const key = 'AIzaSyDrQpacyuBhAAB5TFobrhKWyk7rugcEOfw';
+const key = "<google's api key>";
 
 const geoCodingBaseUrl = `https://maps.googleapis.com/maps/api/geocode/json?key=${key}`;
 let geoCodingSource = axios.CancelToken.source();

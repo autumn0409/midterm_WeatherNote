@@ -4,7 +4,7 @@ import axios from 'axios';
 // const projectBaseUrl = 'http://localhost:3000/api/projects';
 
 // Staging server URL
-const projectBaseUrl = 'http://weathernote-server-dev.us-west-2.elasticbeanstalk.com/api/projects';
+const projectBaseUrl = '<Demo link>/api/projects';
 
 export const listProjects = () => {
     let url = `${projectBaseUrl}`;

@@ -4,7 +4,7 @@ import axios from 'axios';
 // const todoBaseUrl = 'http://localhost:3000/api/todos';
 
 // Staging server URL
-const todoBaseUrl = 'http://weathernote-server-dev.us-west-2.elasticbeanstalk.com/api/todos';
+const todoBaseUrl = '<Demo link>/api/todos';
 
 export const listTodos = (filterMode = 'all', project) => {
     let url = `${todoBaseUrl}?`;

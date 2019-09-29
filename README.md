@@ -24,9 +24,13 @@ Please first clone this repo, and then take the following steps to run the appli
 
 3. In `src/api/todos.js`, set `todoBaseUrl` from staging version to develop version.
 
-4. `npm run build`
+4. Add api keys in both `src/api/open-weather-map.js` and `src/api/location.js`.
+(Please see <https://developers.google.com/maps/documentation/geocoding/get-api-key> and
+<https://openweathermap.org/appid>)
 
-5. Copy the folder `build` to `weathernote-server/`.
+5. `npm run build`
+
+6. Copy the folder `build` to `weathernote-server/`.
 
 ### Under `weathernote-server/`
 
