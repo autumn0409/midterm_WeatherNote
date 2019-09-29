@@ -12,10 +12,6 @@ WeatherNote is able to:
 
 * Create, organize your todos with schedule and project management.
 
-## Demo Link
-
-<http://weathernote-server-dev.us-west-2.elasticbeanstalk.com/>
-
 ## Install and Run
 
 Please first clone this repo, and then take the following steps to run the application on your computer:
